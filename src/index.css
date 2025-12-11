@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.c-bg {
+  background-color: #416165;
+  color: black;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.nav-bg{
+    background-color: #0B3948;
+    color: #D0CDD7;
+}
