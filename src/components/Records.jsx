@@ -8,16 +8,10 @@ function Records({ data }) {
           return (
             <div className="col-span-1 text-[#D0CDD7]" key={idx}>
               <div className="grid grid-cols-3">
-                <div className="col-span-3 text-center  py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-                  <label className="p-4">
-                    Exchange {"=>"} {value.exchange}
-                  </label>
-                  <label className="p-4">
-                    Priority {"=>"} {value.priority}
-                  </label>
-                  <label className="p-4">
-                    Type {"=>"} {value.type}
-                  </label>
+                <div className="col-span-3 text-center text-md my-1 text-sm md:text-xl">
+                  <label className="p-4">{value.exchange}</label>
+                  <label className="p-4">{value.priority}</label>
+                  <label className="p-4">{value.type}</label>
                 </div>
               </div>
             </div>
@@ -33,11 +27,12 @@ function Records({ data }) {
         <div className="text-center grid grid-cols-1">
           {data.result.map((value, idx) => {
             return (
-              <div className="col-span-1 text-[#D0CDD7] text-md " key={idx}>
+              <div
+                className="col-span-1 text-[#D0CDD7] text-sm md:text-xl "
+                key={idx}
+              >
                 <div className="grid grid-cols-1">
-                  <div className="flex py-2 border px-2  truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-                    Record {(idx += 1)} {"=>"} {value}{" "}
-                  </div>
+                  <div className="flex-1 truncate text-md my-1 ">{value} </div>
                 </div>
               </div>
             );
@@ -51,27 +46,27 @@ function Records({ data }) {
     return (
       <>
         <div className="col-span-1 text-[#D0CDD7]">
-          <div className="grid grid-cols-1">
-            <label className="p-4 text-center   py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-              Hostmaster {"=>"} {data.result.hostmaster}
+          <div className="grid grid-cols-1 text-sm md:text-xl">
+            <label className="p-4 text-center">
+              Hostmaster {":"} {data.result.hostmaster}
             </label>
-            <label className="p-4 text-center   py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-              NS name {"=>"} {data.result.nsname}
+            <label className="p-4 text-center   ">
+              NS name {":"} {data.result.nsname}
             </label>
-            <label className="p-4 text-center   py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-              Serial {"=>"} {data.result.serial}
+            <label className="p-4 text-center   ">
+              Serial {":"} {data.result.serial}
             </label>
-            <label className="p-4 text-center   py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-              Refresh {"=>"} {data.result.refresh}
+            <label className="p-4 text-center   ">
+              Refresh {":"} {data.result.refresh}
             </label>
-            <label className="p-4 text-center   py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-              Retry {"=>"} {data.result.retry}
+            <label className="p-4 text-center   ">
+              Retry {":"} {data.result.retry}
             </label>
-            <label className="p-4 text-center   py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-              Expire {"=>"} {data.result.expire}
+            <label className="p-4 text-center   ">
+              Expire {":"} {data.result.expire}
             </label>
-            <label className="p-4 text-center   py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-              Minttl {"=>"} {data.result.minttl}
+            <label className="p-4 text-center   ">
+              Minttl {":"} {data.result.minttl}
             </label>
           </div>
         </div>
@@ -84,18 +79,23 @@ function Records({ data }) {
       <>
         {data.result.map((value, idx) => {
           return (
-            <div className="col-span-1 text-[#D0CDD7]" key={idx}>
-              <div className="grid grid-cols-3">
-                <div className="col-span-3 text-center flex  py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]">
-                  <label className="p-4">
-                    Critical {"=>"} {value.critical}
-                  </label>
-                  <label className="p-4">
-                    Type {"=>"} {value.type}
-                  </label>
-                  <label className="p-4">
-                    Issue {"=>"} {value.issue || value.issuewild}
-                  </label>
+            <div
+              className="col-span-1 text-[#D0CDD7] text-xs md:text-xl"
+              key={idx}
+            >
+              <div className="grid grid-cols-3 ">
+                <div className="col-span-3 text-center flex justify-center  items-center ">
+                  <div className="justify-center items-center">
+                    <label className="p-4">
+                      Critical {"=>"} {value.critical}
+                    </label>
+                    <label className="p-4">
+                      Type {"=>"} {value.type}
+                    </label>
+                    <label className="p-4">
+                      Issue {"=>"} {value.issue || value.issuewild}
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -111,10 +111,10 @@ function Records({ data }) {
         return (
           <div className="text-center">
             <div
-              className="col-span-1 text-[#D0CDD7]  py-2 border px-2 truncate text-md my-1 rounded bg-[#0B3948] hover:bg-[#416165] hover:border-[#0B3948]"
+              className="col-span-1 text-[#D0CDD7] text-sm md:text-xl"
               key={idx}
             >
-              Record {(idx += 1)} {"=>"} {value}
+              {value}
             </div>
           </div>
         );
