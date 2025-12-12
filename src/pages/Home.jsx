@@ -40,6 +40,7 @@ function Home() {
 
   const fetchRecordData = async (e) => {
     e.preventDefault();
+    setError(null);
 
     try {
       setIsLoading(true);
@@ -47,11 +48,10 @@ function Home() {
         `${BASE_URL}/api/${recordType}/?domain=${domain.trim()}`
       );
       setData(res.data);
-      console.log(res.data);
       setIsLoading(false);
     } catch (error) {
       setError(error.response.data.error);
-      console.error("Error fetching DNS Record Data", error);
+      setData(null);
     } finally {
       setIsLoading(false);
     }
@@ -59,17 +59,17 @@ function Home() {
 
   useEffect(() => {
     if (error) {
-      setInterval(() => {
+      setTimeout(() => {
         setError(null);
-      }, 2000);
+      }, "5000");
     }
-  }, [error]);
+  }, [error, setError]);
 
   return (
     <>
       {error && (
         <div className="flex justify-end pr-10">
-          <div className="absolute  pt-10 z-10 w-1/6">
+          <div className="absolute  pt-10 z-10 w-1/5">
             <Toast error={error} />
           </div>
         </div>
