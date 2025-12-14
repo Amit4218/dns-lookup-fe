@@ -75,12 +75,12 @@ function Home() {
         </div>
       )}
 
-      <div className="h-[88.7vh] bg-gray-900 px-6 lg:px-8 rounded overflow-y-auto pb-10">
+      <div className="h-[87vh] bg-gray-900 px-6 lg:px-8 rounded overflow-y-auto pb-10">
         <div className="mb-5">
           <h1 className="text-center pt-10 text-3xl sm:text-5xl text-[#D9DBF1]">
             DNS Lookup Tool
             <p className="text-sm text-zinc-600 leading-0 pt-5">
-              Search Up Different Dns Data Records
+              Quickly look up DNS records for any domain.
             </p>
           </h1>
         </div>

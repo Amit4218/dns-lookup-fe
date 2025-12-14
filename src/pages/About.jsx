@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <main className="grid h-[88vh]  place-items-center bg-gray-900 px-6  lg:px-8 rounded">
+    <main className="grid h-[87vh]  place-items-center bg-gray-900 px-6  lg:px-8 rounded">
       <div className="text-center">
         <h4 className=" text-3xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
           Hi !
@@ -25,12 +25,6 @@ function About() {
             className="rounded-md bg-[#0B3948] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-[#416165] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
           >
             Contact Me here!
-          </Link>
-          <Link
-            to="/"
-            className="rounded-md bg-[#0B3948] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-[#416165] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-          >
-            Go back home
           </Link>
         </div>
       </div>
